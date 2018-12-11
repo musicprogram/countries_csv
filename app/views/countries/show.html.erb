@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @country.name %>
+</p>
+
+<ul>
+  <% @country.states.each do |state| %>
+    <li><%= state.name %></li>
+  <% end %>
+</ul>
+
+
+
+<%= link_to 'Edit', edit_country_path(@country) %> |
+<%= link_to 'Back', countries_path %>
